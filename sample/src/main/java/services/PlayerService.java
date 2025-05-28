@@ -101,6 +101,9 @@ public class PlayerService {
 			ps.setInt(7, P.getHeight());
 			ps.setInt(8, P.getWeight());
 			ResultSet res = ps.getGeneratedKeys();
+
+			ps.executeUpdate();
+
 			if (res.next()) {
 				id = res.getInt(1);
 			}

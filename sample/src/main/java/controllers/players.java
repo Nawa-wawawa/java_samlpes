@@ -66,7 +66,7 @@ public class players extends HttpServlet {
 			LocalDate birth = LocalDate.parse(request.getParameter("birth"));
 			int height = Integer.parseInt(request.getParameter("height"));
 			int weight = Integer.parseInt(request.getParameter("weight"));
-			
+			System.out.println(name);
 			Player p = new Player(country_id,uniform_num,position,name,club,birth,height,weight);
 			
 			PlayerService ps = new PlayerService();
@@ -77,6 +77,8 @@ public class players extends HttpServlet {
 			e.printStackTrace();
 		}
 		
+		doGet(request,response);
+		//request.getRequestDispatcher("/players.jsp").forward(request, response);
 	}
 		
 
