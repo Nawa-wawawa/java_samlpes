@@ -11,7 +11,7 @@
 <title>Core タグライブラリ</title>
 </head>
 <body>
-	あなたの得点は<c:out value = "${point}" />-->です。
+	あなたの得点は<c:out value = "${point}" />です。
 	<br />
 
 	<c:if test="${point > 60}">

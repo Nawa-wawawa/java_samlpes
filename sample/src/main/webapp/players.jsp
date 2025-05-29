@@ -2,38 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c"%>
 <!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
-<!--丸尾君といっしょがいいです。-->
 
 <!DOCTYPE html>
 <html>
@@ -44,117 +12,51 @@
 </head>
 <body>
 
+
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<a class="navbar-brand">World Cup 2014</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="players">一覧</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="players_addServlet">登録</a></li>
+					<li class="nav-item"><a class="nav-link" href="">更新</a></li>
+					<li class="nav-item"><a class="nav-link" href="">削除</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<div class="container">
-
-		<div class="accordion accordion-flush" id="accordionFlushExample">
-			<div class="accordion-item">
-				<h2 class="accordion-header">
-					<button class="accordion-button collapsed" type="button"
-						data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-						aria-expanded="false" aria-controls="flush-collapseOne">
-						選手登録</button>
-				</h2>
-				<div id="flush-collapseOne" class="accordion-collapse collapse"
-					data-bs-parent="#accordionFlushExample">
-					<div class="accordion-body">
-						<form method = "post" action = "players">
-							<div class="mb-3">
-								<label for="countryCode" class="form-label">国番号を入力してください</label>
-								<input type="text" class="form-control"name="country_id" 
-									placeholder="" aria-describedby="countryCodeHelp">
-							</div>
-
-							<div class="mb-3">
-								<label for="uniformNumber" class="form-label">背番号を入力してください</label>
-								<input type="number" class="form-control" name="uniform_num"
-									placeholder="10" aria-describedby="uniformNumberHelp">
-							</div>
-
-							<div class="mb-3">
-								<label for="position" class="form-label">ポジションを入力してください</label>
-								<input type="text" class="form-control" name="position"
-									placeholder="FW" aria-describedby="positionHelp">
-							</div>
-
-							<div class="mb-3">
-								<label for="playerName" class="form-label">名前を入力してください</label> <input
-									type="text" class="form-control" name="name"
-									placeholder="山田 太郎" aria-describedby="playerNameHelp">
-							</div>
-
-							<div class="mb-3">
-								<label for="team" class="form-label">所属を入力してください</label> <input
-									type="text" class="form-control" name="club" placeholder="東京FC"
-									aria-describedby="teamHelp">
-							</div>
-
-							<div class="mb-3">
-								<label for="birthdate" class="form-label">誕生日を入力してください</label> <input
-									type="date" class="form-control" name="birth"
-									aria-describedby="birthdateHelp">
-							</div>
-
-							<div class="mb-3">
-								<label for="height" class="form-label">身長を入力してください</label> <input
-									type="text" class="form-control" name="height" placeholder="170"
-									aria-describedby="heightHelp">
-							</div>
-
-							<div class="mb-3">
-								<label for="weight" class="form-label">体重を入力してください</label> <input
-									type="text" class="form-control" name="weight" placeholder="65"
-									aria-describedby="weightHelp">
-							</div>
-
-							<button type="submit" class="btn btn-primary">登録！</button>
-						</form>
-					</div>
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-12">
+					<h1>ワールドカップ2014</h1>
 				</div>
 			</div>
-			<div class="accordion-item">
-				<h2 class="accordion-header">
-					<button class="accordion-button collapsed" type="button"
-						data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-						aria-expanded="false" aria-controls="flush-collapseTwo">
-						選手リスト</button>
-				</h2>
-				<div id="flush-collapseTwo" class="accordion-collapse collapse"
-					data-bs-parent="#accordionFlushExample">
-					<div class="accordion-body">
-						<div class="accordion-body">
-							<ul class="list-group">
-								<c:forEach var="item" items="${players}">
-									<li class="list-group-item">${item.getPosition()}:${item.getName()}</li>
-								</c:forEach>
-							</ul>
-						</div>
-					</div>
+			<div class="row">
+				<div class="col-3">
+					<h3>選手一覧</h3>
 				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header">
-						<button class="accordion-button collapsed" type="button"
-							data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-							aria-expanded="false" aria-controls="flush-collapseThree">
-							Accordion Item #3</button>
-					</h2>
-					<div id="flush-collapseThree" class="accordion-collapse collapse"
-						data-bs-parent="#accordionFlushExample">
-						<div class="accordion-body">
-							Placeholder content for this accordion, which is intended to
-							demonstrate the
-							<code>.accordion-flush</code>
-							class. This is the third item's accordion body. Nothing more
-							exciting happening here in terms of content, but just filling up
-							the space to make it look, at least at first glance, a bit more
-							representative of how this would look in a real-world
-							application.
-						</div>
-					</div>
+				<div class="col-9">
+					<!-- 選手リスト -->
+					<h4 class="mb-3">選手データの一覧です。</h4>
+					<ul class="list-group">
+						<c:forEach var="item" items="${players}">
+							<li class="list-group-item">${item.getPosition()}:${item.getName()}</li>
+						</c:forEach>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<script src="js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
