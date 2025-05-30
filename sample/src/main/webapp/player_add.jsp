@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<title>Coreタグライブラリ</title>
+<title>ワールドカップ2014</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -23,8 +23,8 @@
 						aria-current="page" href="players">一覧</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="players_addServlet">登録</a></li>
-					<li class="nav-item"><a class="nav-link" href="">更新</a></li>
-					<li class="nav-item"><a class="nav-link" href="">削除</a></li>
+					<li class="nav-item"><a class="nav-link" href="players_updateServlet">更新</a></li>
+					<li class="nav-item"><a class="nav-link" href="players_deleteServlet">削除</a></li>
 				</ul>
 			</div>
 		</div>

@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<title>Coreタグライブラリ</title>
+<title>ワールドカップ2014</title>
 </head>
 <body>
 
@@ -28,8 +28,10 @@
 						aria-current="page" href="players">一覧</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="players_addServlet">登録</a></li>
-					<li class="nav-item"><a class="nav-link" href="">更新</a></li>
-					<li class="nav-item"><a class="nav-link" href="">削除</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="players_updateServlet">更新</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="players_deleteServlet">削除</a></li>
 				</ul>
 			</div>
 		</div>
@@ -49,9 +51,30 @@
 					<!-- 選手リスト -->
 					<h4 class="mb-3">選手データの一覧です。</h4>
 					<ul class="list-group">
-						<c:forEach var="item" items="${players}">
-							<li class="list-group-item">${item.getPosition()}:${item.getName()}</li>
-						</c:forEach>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <th>ポジション</th>
+            <c:forEach var="item" items="${players}">
+                <td>${item.position}</td>
+            </c:forEach>
+        </tr>
+        <tr>
+            <th>名前</th>
+            <c:forEach var="item" items="${players}">
+                <td>${item.name}</td>
+            </c:forEach>
+        </tr>
+        <tr>
+            <th>所属</th>
+            <c:forEach var="item" items="${players}">
+                <td>${item.club}</td>
+            </c:forEach>
+        </tr>
+    </tbody>
+</table>
+
+
 					</ul>
 				</div>
 			</div>

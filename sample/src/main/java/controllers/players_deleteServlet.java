@@ -18,18 +18,25 @@ import services.PlayerService;
 import utils.Db;
 
 /**
- * Servlet implementation class Map
+ * Servlet implementation class players_deleteServlet
  */
-@WebServlet("/players")
-public class players extends HttpServlet {
+@WebServlet("/players_deleteServlet")
+public class players_deleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public players_deleteServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 
 		ArrayList<Player> players = null;
 
@@ -45,14 +52,31 @@ public class players extends HttpServlet {
 
 		request.setAttribute("players", players);
 
-		request.getRequestDispatcher("/players.jsp").forward(request, response);
+		request.getRequestDispatcher("/player_delete.jsp").forward(request, response);
 	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		try (Connection con = Db.open()) {
 
-		doGet(request,response);
-		//request.getRequestDispatcher("/players.jsp").forward(request, response);
+			int id = Integer.parseInt(request.getParameter("id"));
+
+			PlayerService ps = new PlayerService();
+			ps.delete(id);
+
+		} catch (SQLException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		} catch (NamingException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
+		response.sendRedirect(request.getContextPath() + "/players");
+
 	}
-		
 
 }
